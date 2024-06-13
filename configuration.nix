@@ -134,8 +134,8 @@
 
   programs.git.config = {
     enable = true;
-    user.name = "Alex Eisenschmied";
-    user.email = "alexander.eisenschmied@gmail.com";
+    userName = "Alex Eisenschmied";
+    userEmail = "alexander.eisenschmied@gmail.com";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
