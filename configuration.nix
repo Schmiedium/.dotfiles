@@ -109,6 +109,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
+  blender
   obsidian
   unityhub
   discord
