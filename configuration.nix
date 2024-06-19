@@ -125,6 +125,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
+  make
+  nodejs_22
   stylua
   ripgrep
   freecad
