@@ -136,7 +136,6 @@
   unityhub
   discord
   unzip
-  git
   starship
   rustup
   clang
