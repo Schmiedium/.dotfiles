@@ -125,6 +125,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
+  gimp
   gnumake42
   nodejs_21
   stylua
