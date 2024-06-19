@@ -126,7 +126,7 @@
   environment.systemPackages = with pkgs; [
   lua
   gnumake42
-  nodejs_22
+  nodejs_21
   stylua
   ripgrep
   freecad
