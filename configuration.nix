@@ -125,7 +125,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
-  make
+  gnumake42
   nodejs_22
   stylua
   ripgrep
