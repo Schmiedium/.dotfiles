@@ -68,4 +68,24 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  home.file.".ssh/allowed_signers".text = 
+  "* ${builtins.readFile /home/alex/.ssh/id_ed25519.pub}";
+
+  programs = {
+    git = {
+      enable = true;
+      userName = "Alex Eisenschmied";
+      userEmail = "alexander.eisenschmied@gmail.com";
+
+      extraConfig = {
+        # Sign all commits using ssh key
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        gpg.ssh.allowedSigners = "~/.ssh/allowed_signers";
+        user.signingkey = "~/.ssh/id_ed25519.pub";
+      };
+
+    };
+  };
 }
