@@ -125,6 +125,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
+  stylua
+  ripgrep
   freecad
   blender
   obsidian
@@ -134,7 +136,6 @@
   git
   starship
   rustup
-  rust-analyzer
   clang
   gcc
   neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
