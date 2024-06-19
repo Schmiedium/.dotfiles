@@ -52,6 +52,22 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  programs.hyprland = {
+    enable = true;
+    enableNvidiaPatches = true;
+    xwayland.enable = true;
+  };
+
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE = "1";
+  };
+
+  hardware = {
+    opengl.enable = true;
+    nvidia.modesetting.enable = true;
+  };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -118,6 +134,7 @@
   git
   starship
   rustup
+  rust-analyzer
   clang
   gcc
   neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
@@ -130,6 +147,7 @@
 
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
+    libgcc
     zlib
     fuse3
     icu
