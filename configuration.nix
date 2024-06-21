@@ -132,6 +132,7 @@
   stylua
   ripgrep
   freecad
+  openscad
   blender
   obsidian
   unityhub
