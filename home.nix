@@ -73,7 +73,7 @@
     git = {
       enable = true;
       userName = "Alex Eisenschmied";
-      userEmail = "alexander.eisenschmied@gmail.com";
+      userEmail = "105024964+Schmiedium@users.noreply.github.com";
 
       extraConfig = {
         # Sign all commits using ssh key
