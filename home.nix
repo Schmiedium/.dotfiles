@@ -76,6 +76,7 @@
       userEmail = "105024964+Schmiedium@users.noreply.github.com";
 
       extraConfig = {
+        core.editor = "nvim";
         # Sign all commits using ssh key
         commit.gpgsign = true;
         gpg.format = "ssh";
