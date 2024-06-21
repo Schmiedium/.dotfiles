@@ -126,6 +126,7 @@
   environment.systemPackages = with pkgs; [
   lua
   gnupg
+  pinentry-gnome
   gimp
   gnumake42
   nodejs_21

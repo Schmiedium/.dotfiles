@@ -69,9 +69,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.file.".ssh/allowed_signers".text = 
-  "* ${builtins.readFile /home/alex/.ssh/id_ed25519.pub}";
-
   programs = {
     git = {
       enable = true;
