@@ -125,8 +125,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
-  gnupg
-  pinentry-gnome
   gimp
   gnumake42
   nodejs_21
@@ -144,7 +142,6 @@
   clang
   gcc
   neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  kitty
   alacritty
   wget
   ];
