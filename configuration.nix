@@ -125,6 +125,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   lua
+  cura
   gimp
   gnumake42
   nodejs_21
@@ -144,7 +145,18 @@
   neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   alacritty
   wget
+  waybar
+  dunst
+  libnotify
+  swww
+  rofi-wayland
+  firefox-wayland
+
+
   ];
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ] ;
 
   programs.nix-ld.enable = true;
 
