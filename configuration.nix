@@ -150,9 +150,6 @@
   libnotify
   swww
   rofi-wayland
-  firefox-wayland
-
-
   ];
 
   xdg.portal.enable = true;

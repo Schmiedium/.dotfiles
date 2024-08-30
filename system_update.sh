@@ -10,4 +10,4 @@ echo "switch to switch now, boot to switch on reboot\n"
 
 read -p "switch or boot: " switch_or_boot
 
-sudo nixos-rebuild $switch_or_boot --flake .
+nixos-rebuild $switch_or_boot --flake . --use-remote-sudo
