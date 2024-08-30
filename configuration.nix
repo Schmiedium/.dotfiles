@@ -150,6 +150,7 @@
   libnotify
   swww
   rofi-wayland
+  networkmanagerapplet
   ];
 
   xdg.portal.enable = true;
