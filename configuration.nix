@@ -152,6 +152,7 @@
   rofi-wayland
   networkmanagerapplet
   pavucontrol
+  gamescope
   ];
 
   xdg.portal.enable = true;
