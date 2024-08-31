@@ -151,6 +151,7 @@
   swww
   rofi-wayland
   networkmanagerapplet
+  pavucontrol
   ];
 
   xdg.portal.enable = true;
