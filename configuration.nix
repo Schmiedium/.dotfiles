@@ -100,7 +100,7 @@
   users.users.alex = {
     isNormalUser = true;
     description = "Alex Eisenschmied";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -162,7 +162,6 @@
       guest.enable = true;
     };
   };
-  users.extraGroups.vboxusers.members = ["alex"];
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
 
 
