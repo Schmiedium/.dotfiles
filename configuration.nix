@@ -163,6 +163,7 @@
     };
   };
   users.extraGroups.vboxusers.members = ["alex"];
+  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
 
 
   xdg.portal.enable = true;
