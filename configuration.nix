@@ -127,7 +127,7 @@
   cura
   gimp
   gnumake42
-  nodejs_21
+  nodejs_22
   stylua
   ripgrep
   freecad
