@@ -158,8 +158,11 @@
   virtualisation = {
     libvirtd.enable = true;
     virtualbox = {
-      host.enableKvm = true;
-      host.enable = true;
+      host = {
+        enableKvm = true;
+        enable = true;
+        addNetworkInterface = false;
+      };
       guest.enable = true;
     };
   };
