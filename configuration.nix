@@ -142,7 +142,6 @@
   clang
   gcc
   neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  virtualbox
   alacritty
   wget
   waybar
@@ -156,14 +155,14 @@
   ];
 
   virtualisation = {
-    libvirtd.enable = true;
-    virtualbox = {
-      host = {
-        enableKvm = true;
-        enable = true;
-        addNetworkInterface = false;
+    docker = {
+      enable = true;
+      rootless = {
+        setSocketVariable = true;
       };
-      guest.enable = true;
+    };
+    libvirtd.enable = true;
+    guest.enable = true;
     };
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
