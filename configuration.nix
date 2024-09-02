@@ -163,7 +163,6 @@
       };
     };
     libvirtd.enable = true;
-    guest.enable = true;
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
 
