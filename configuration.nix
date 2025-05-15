@@ -60,11 +60,6 @@
     enable = true;
   };
 
-  programs.nixvim = {
-    enable = true;
-    plugins.lualine.enable = true;
-
-  };
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
