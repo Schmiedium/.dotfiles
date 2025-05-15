@@ -9,7 +9,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ...}:
+  outputs = { self, nixpkgs, home-manager, determinate, ...}:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
