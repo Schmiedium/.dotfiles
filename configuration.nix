@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
     ];
 
+  determinate.nixosModules.default;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -196,7 +197,7 @@
   programs.git.config = {
     enable = true;
     userName = "Alex Eisenschmied";
-    userEmail = "alexander.eisenschmied@gmail.com";
+    userEmail = "105024964+Schmiedium@users.noreply.github.com";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
