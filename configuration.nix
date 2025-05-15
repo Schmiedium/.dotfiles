@@ -10,8 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  determinate.nixosModules.default
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.

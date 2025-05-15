@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 git add ./configuration.nix
+git add ./flake.nix
+git add ./flake.lock
 read -p "Commit message: " message
 git commit -m "$message"
 git push
