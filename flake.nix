@@ -24,7 +24,7 @@
     homeConfigurations = {
       alex = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [./home.nix, determinate.nixosModules.default];
+        modules = [./home.nix determinate.nixosModules.default];
       };
     };
   };
