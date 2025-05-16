@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-git add ./configuration.nix
-git add ./flake.nix
-git add ./flake.lock
+git add ./*
 read -p "Commit message: " message
 git commit -m "$message"
-git push
 
 echo "Switch now or upgrade on reboot?\n"
 echo "switch to switch now, boot to switch on reboot\n"
