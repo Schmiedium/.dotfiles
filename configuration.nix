@@ -62,8 +62,8 @@
       spawn-at-startup = {
         (makeCommand "swaybg -i /home/alex/Pictures/wallpapers/BIqFbcl.jpg")
         (makeCommand "waybar")
-      }
-    }
+      };
+    };
   };
 
 
