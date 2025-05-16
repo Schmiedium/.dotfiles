@@ -127,6 +127,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  swaybg
   lua
   gimp
   gnumake42
@@ -188,10 +189,6 @@
     expat
   ];
 
-  programs.swaybg = {
-    enable = true;
-    
-  };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Hasklig" "FiraCode"]; })
