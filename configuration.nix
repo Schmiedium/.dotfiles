@@ -58,12 +58,6 @@
 
   programs.niri = {
     enable = true;
-    settings = {
-#      spawn-at-startup = [
-#        "swaybg -i /home/alex/Pictures/wallpapers/BIqFbcl.jpg"
-#        "waybar"
-#      ];
-    };
   };
 
 
