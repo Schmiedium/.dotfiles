@@ -5,6 +5,7 @@
   inputs = {
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
+    lazy-trees = true;
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
