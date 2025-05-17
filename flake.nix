@@ -18,7 +18,6 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        lazy-trees = true;
         modules = [./configuration.nix determinate.nixosModules.default];
       };
     };
