@@ -48,6 +48,7 @@
     ".config/starship.toml".source = builtins.path { path = ./user/starship/starship.toml; name = "source"; };
     ".config/niri/config.kdl".source = builtins.path { path = ./user/niri/config.kdl; name = "source"; };
     ".config/fuzzel/fuzzel.ini".source = builtins.path { path = ./user/fuzzel/fuzzel.ini; name = "source"; };
+    ".config/dunst/dunstrc".source = builtins.path { path = ./user/dunst/dunstsrc; name = "source"; };
 
 
     # # You can also set the file content immediately.

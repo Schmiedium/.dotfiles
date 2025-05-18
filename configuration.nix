@@ -127,12 +127,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  nixpkgs-fmt
   swaybg
   lua
   gimp
   gnumake42
   nodejs_22
   stylua
+  lua54Packages.luarocks
   ripgrep
   freecad
   openscad
@@ -153,7 +155,6 @@
   waybar
   dunst
   libnotify
-  swww
   rofi-wayland
   networkmanagerapplet
   pavucontrol
