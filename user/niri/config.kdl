@@ -389,23 +389,23 @@ binds {
 
     Ctrl+Q { close-window; }
 
-    Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-down; }
-    Mod+Up    { focus-window-up; }
-    Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+    Ctrl+Left  { focus-column-left; }
+    Ctrl+Down  { focus-window-down; }
+    Ctrl+Up    { focus-window-up; }
+    Ctrl+Right { focus-column-right; }
+    Ctrl+H     { focus-column-left; }
+    Ctrl+J     { focus-window-down; }
+    Ctrl+K     { focus-window-up; }
+    Ctrl+L     { focus-column-right; }
 
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    Alt+Ctrl+Left  { move-column-left; }
+    Alt+Ctrl+Down  { move-window-down; }
+    Alt+Ctrl+Up    { move-window-up; }
+    Alt+Ctrl+Right { move-column-right; }
+    Alt+Ctrl+H     { move-column-left; }
+    Alt+Ctrl+J     { move-window-down; }
+    Alt+Ctrl+K     { move-window-up; }
+    Alt+Ctrl+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -419,14 +419,14 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Shift+Left  { focus-monitor-left; }
-    Mod+Shift+Down  { focus-monitor-down; }
-    Mod+Shift+Up    { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
-    Mod+Shift+H     { focus-monitor-left; }
-    Mod+Shift+J     { focus-monitor-down; }
-    Mod+Shift+K     { focus-monitor-up; }
-    Mod+Shift+L     { focus-monitor-right; }
+    Ctrl+Shift+Left  { focus-monitor-left; }
+    Ctrl+Shift+Down  { focus-monitor-down; }
+    Ctrl+Shift+Up    { focus-monitor-up; }
+    Ctrl+Shift+Right { focus-monitor-right; }
+    Ctrl+Shift+H     { focus-monitor-left; }
+    Ctrl+Shift+J     { focus-monitor-down; }
+    Ctrl+Shift+K     { focus-monitor-up; }
+    Ctrl+Shift+L     { focus-monitor-right; }
 
     Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -445,10 +445,10 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
 
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    Ctrl+Page_Down      { focus-workspace-down; }
+    Ctrl+Page_Up        { focus-workspace-up; }
+    Ctrl+U              { focus-workspace-down; }
+    Ctrl+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
@@ -458,9 +458,9 @@ binds {
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
 
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
+    Ctrl+Shift+Page_Down { move-workspace-down; }
+    Ctrl+Shift+Page_Up   { move-workspace-up; }
+    Ctrl+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
@@ -469,13 +469,13 @@ binds {
     // To avoid scrolling through workspaces really fast, you can use
     // the cooldown-ms property. The bind will be rate-limited to this value.
     // You can set a cooldown on any bind, but it's most useful for the wheel.
-    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Ctrl+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Ctrl+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
-    Mod+WheelScrollRight      { focus-column-right; }
-    Mod+WheelScrollLeft       { focus-column-left; }
+    Ctrl+WheelScrollRight      { focus-column-right; }
+    Ctrl+WheelScrollLeft       { focus-column-left; }
     Mod+Ctrl+WheelScrollRight { move-column-right; }
     Mod+Ctrl+WheelScrollLeft  { move-column-left; }
 
@@ -531,13 +531,13 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    Ctrl+BracketLeft  { consume-or-expel-window-left; }
+    Ctrl+BracketRight { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
+    Ctrl+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
+    Ctrl+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
@@ -549,7 +549,7 @@ binds {
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
+    Ctrl+C { center-column; }
 
     // Finer width adjustments.
     // This command can also:
@@ -559,12 +559,12 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
+    Ctrl+Minus { set-column-width "-10%"; }
+    Ctrl+Equal { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Ctrl+Shift+Minus { set-window-height "-10%"; }
+    Ctrl+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
@@ -583,8 +583,8 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+P { screenshot; }
-    Ctrl+P { screenshot-screen; }
+    Ctrl+P { screenshot; }
+    Mod+P { screenshot-screen; }
     Alt+P { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
