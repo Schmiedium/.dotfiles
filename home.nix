@@ -5,7 +5,6 @@
   # manage.
   home.username = "alex";
   home.homeDirectory = "/home/alex";
-  nixpgs.overlays = [ niri.overlays ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -84,7 +83,10 @@
         gpg.ssh.allowedSigners = "~/.ssh/allowed_signers";
         user.signingkey = "~/.ssh/id_ed25519.pub";
       };
-
+    niri = {
+      enable = true:
+      settings = {};
+    };  
     };
   };
 }

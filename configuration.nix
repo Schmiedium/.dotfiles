@@ -59,7 +59,7 @@
   programs.niri = {
     enable = true;
   };
-
+  nixpgs.overlays = [ niri.overlays ];
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
