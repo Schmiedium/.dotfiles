@@ -134,7 +134,7 @@
   gnumake42
   nodejs_22
   stylua
-  lua54Packages.luarocks
+  lua51Packages.luarocks
   ripgrep
   freecad
   openscad
