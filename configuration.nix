@@ -162,6 +162,8 @@
   gamescope
   ];
 
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
   virtualisation = {
     docker = {
       enable = true;
