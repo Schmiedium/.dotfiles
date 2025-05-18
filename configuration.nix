@@ -11,6 +11,7 @@
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.lazy-trees = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
