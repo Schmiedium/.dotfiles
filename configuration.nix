@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -128,6 +128,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   nixpkgs-fmt
+  nixd
   swaybg
   lua
   gimp
@@ -172,6 +173,8 @@
     libvirtd.enable = true;
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
 
   xdg.portal.enable = true;
