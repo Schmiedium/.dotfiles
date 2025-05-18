@@ -89,7 +89,7 @@
         user.signingkey = "~/.ssh/id_ed25519.pub";
       };
     niri = {
-      enable = true:
+      enable = true;
       settings = {};
     };  
     };
