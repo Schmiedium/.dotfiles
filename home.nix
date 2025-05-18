@@ -47,6 +47,7 @@
     ".config/waybar/style.css".source = builtins.path { path = ./user/waybar/style.css; name = "source"; };
     ".config/starship.toml".source = builtins.path { path = ./user/starship/starship.toml; name = "source"; };
     ".config/niri/config.kdl".source = builtins.path { path = ./user/niri/config.kdl; name = "source"; };
+    ".config/fuzzel/fuzzel.ini".source = builtins.path { path = ./user/fuzzel/fuzzel.ini; name = "source"; };
 
 
     # # You can also set the file content immediately.
