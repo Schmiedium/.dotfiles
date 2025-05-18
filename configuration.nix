@@ -193,7 +193,7 @@
 
 
   fonts.packages = with pkgs; [
-     nerd-fonts.hasklug nerd-fonts.firacode  ];
+     nerd-fonts.hasklug nerd-fonts.fira-code  ];
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
