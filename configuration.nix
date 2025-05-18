@@ -174,7 +174,7 @@
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+#  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
 
   xdg.portal.enable = true;
