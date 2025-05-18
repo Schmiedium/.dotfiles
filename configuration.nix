@@ -162,7 +162,7 @@
   gamescope
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = [ "nixpkgs=${nixpkgs}" ];
 
   virtualisation = {
     docker = {
