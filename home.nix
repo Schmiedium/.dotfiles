@@ -43,10 +43,10 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    ".config/waybar/config".source = ./user/waybar/config;
-    ".config/waybar/style.css".source = ./user/waybar/style.css;
-    ".config/starship.toml".source = ./user/starship/starship.toml;
-    ".config/niri/config.kdl".source = ./user/niri/config.kdl;
+    ".config/waybar/config".source = builtins.path { path = ./user/waybar/config; name = "source"; };
+    ".config/waybar/style.css".source = builtins.path { path = ./user/waybar/style.css; name = "source"; };
+    ".config/starship.toml".source = builtins.path { path = ./user/starship/starship.toml; name = "source"; };
+    ".config/niri/config.kdl".source = builtins.path { path = ./user/niri/config.kdl; name = "source"; };
 
 
     # # You can also set the file content immediately.
