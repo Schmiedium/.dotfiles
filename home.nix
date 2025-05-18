@@ -88,10 +88,10 @@
         gpg.ssh.allowedSigners = "~/.ssh/allowed_signers";
         user.signingkey = "~/.ssh/id_ed25519.pub";
       };
+    };
     niri = {
       enable = true;
       settings = {};
     };  
-    };
   };
 }
