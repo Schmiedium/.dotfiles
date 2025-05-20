@@ -1,1 +1,4 @@
-follow=keyboard
+monitor = 1
+font = Hasklug 8
+corner_radius = 12
+
