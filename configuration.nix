@@ -156,6 +156,7 @@
   xwayland-satellite
   wget
   waybar
+  swaylock
   dunst
   libnotify
   rofi-wayland
