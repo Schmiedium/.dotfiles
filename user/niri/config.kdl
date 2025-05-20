@@ -282,7 +282,7 @@ spawn-at-startup "obsidian"
 spawn-at-startup "swaybg" "-i" "/home/alex/Pictures/wallpapers/kvacm-2020/early_evening_6k.jpg"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "swayidle" "-w" "timeout" "600" "'swaylock -i -f /home/alex/Pictures/wallpapers/kvacm-2020/early_evening_6k.jpg'" "timeout" "600" "'niri msg output HDMI-A-1 off'" "timeout" "600" "'niri msg output DP-3 off'"
+spawn-at-startup "swayidle" "-w" "timeout" "3" "'swaylock" "-i" "-f" "/home/alex/Pictures/wallpapers/kvacm-2020/early_evening_6k.jpg'" "timeout" "3" "'niri" "msg" "output" "HDMI-A-1 off'" "timeout" "3" "'niri" "msg" "output" "DP-3" "off'"
 
 environment {
     DISPLAY ":0"
