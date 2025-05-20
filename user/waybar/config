@@ -84,7 +84,7 @@
         }
     },
     "pulseaudio": {
-        "format": "{volume}% 󰕾 "
+        "format": "{volume}% 󰕾 ",
 	"actions": {
 	    "on-click": "pavucontrol"
 	}
