@@ -96,7 +96,7 @@ input {
     position x=1280 y=0
 }
 output "DP-3" {
-    mode "2560x1440@143.97"
+    mode "2560x1440@143.972"
     scale 1.0
     position x=0 y=0
     variable-refresh-rate on-demand=true
@@ -104,7 +104,7 @@ output "DP-3" {
 }
 
 output "HDMI-A-1" {
-    mode "1920x1080@74.97"
+    mode "1920x1080@74.973"
     scale 1.0
     position x=-1920 y=0
 
@@ -282,6 +282,7 @@ spawn-at-startup "obsidian"
 spawn-at-startup "swaybg" "-i" "/home/alex/Pictures/wallpapers/kvacm-2020/early_evening_6k.jpg"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swayidle" "-w" "timeout" "600" "'swaylock -i -f /home/alex/Pictures/wallpapers/kvacm-2020/early_evening_6k.jpg'" "timeout" "600" "'niri msg output HDMI-A-1 off'" "timeout" "600" "'niri msg output DP-3 off'"
 
 environment {
     DISPLAY ":0"
