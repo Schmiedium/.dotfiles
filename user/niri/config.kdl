@@ -269,7 +269,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
-spawn-at-startup "swaybg" "-i" "/home/alex/Pictures/wallpapers/wallhaven-1p6gzw.jpg"
+spawn-at-startup "swaybg" "-i" "/home/alex/Pictures/wallpapers/wallhaven-l8x1pr.jpg"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 
@@ -328,6 +328,8 @@ window-rule {
     clip-to-geometry true
     geometry-corner-radius 12
     draw-border-with-background false
+    open-on-workspace 1
+    open-on-output "DP-3"
 }
 
 window-rule {
