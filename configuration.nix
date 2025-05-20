@@ -132,6 +132,7 @@
   nixpkgs-fmt
   nixd
   swaybg
+  swayidle
   lua
   gimp
   gnumake42
