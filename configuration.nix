@@ -102,6 +102,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alex = {
+    shell = pkgs.nushell;
     isNormalUser = true;
     description = "Alex Eisenschmied";
     extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
@@ -127,6 +128,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  nushell
   nixpkgs-fmt
   nixd
   swaybg
