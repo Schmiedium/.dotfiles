@@ -279,7 +279,7 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "firefox"
 spawn-at-startup "obsidian"
-spawn-at-startup "swaybg" "-i" "/home/alex/Pictures/wallpapers/wallhaven-l8x1pr.jpg"
+spawn-at-startup "swaybg" "-i" "/home/alex/Pictures/wallpapers/kvacm-2020/early_evening_6k.jpg"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 
