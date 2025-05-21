@@ -1,0 +1,8 @@
+background = 1a1b26
+foreground = a9b1d6
+
+font-family = "Hasklug Nerd Font"
+font-size = 15.0
+
+background-opacity = 0.5
+background-blur = true
