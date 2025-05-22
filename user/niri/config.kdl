@@ -352,7 +352,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Ghostty"
+    match app-id="ghostty"
     geometry-corner-radius 12
     clip-to-geometry true
     draw-border-with-background false
