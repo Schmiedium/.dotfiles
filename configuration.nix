@@ -129,8 +129,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   nushell
+  gitui
   nixpkgs-fmt
   nixd
+  ncspot
   swaybg
   swayidle
   lua
