@@ -132,6 +132,10 @@
   gitui
   nixpkgs-fmt
   nixd
+  bacon
+  yazi
+  hyperfine
+  dust
   ncspot
   swaybg
   swayidle
