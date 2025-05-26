@@ -184,6 +184,7 @@
       };
     };
     libvirtd.enable = true;
+    waydroid.enable = true;
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
 
