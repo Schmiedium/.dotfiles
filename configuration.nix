@@ -89,7 +89,7 @@
       login.u2fAuth = true;
       sudo.u2fAuth = true;
     };
-    u2f = {
+    u2f.settings = {
       interactive = true;
       cue = true;
     };
