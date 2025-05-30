@@ -130,6 +130,7 @@
   environment.systemPackages = with pkgs; [
   nushell
   gitui
+  lazygit
   nixpkgs-fmt
   nixd
   bacon
