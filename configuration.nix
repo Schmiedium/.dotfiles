@@ -82,11 +82,17 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  security.pam.services = {
-    login.u2fAuth = true;
-    sudo.u2fAuth = true;
+  security.pam = {
+    services = {
+      login.u2fAuth = true;
+      sudo.u2fAuth = true;
+    };
+    u2f = {
+      interactive = true;
+      cue = true;
+    };
   };
   services.pipewire = {
     enable = true;
