@@ -86,7 +86,7 @@
   security.rtkit.enable = true;
   security.pam = {
     services = {
-      swaylock = true;
+      swaylock = {};
       login.u2fAuth = true;
       sudo.u2fAuth = true;
     };
