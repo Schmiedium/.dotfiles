@@ -95,6 +95,7 @@
       cue = true;
     };
   };
+  programs.swaylock.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -177,7 +178,6 @@
   xwayland-satellite
   wget
   waybar
-  swaylock
   dunst
   libnotify
   rofi-wayland
