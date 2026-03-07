@@ -165,6 +165,7 @@
       },
       "locked": {
         "lastModified": 1763992789,
+        "narHash": "sha256-WHkdBlw6oyxXIra/vQPYLtqY+3G8dUVZM8bEXk0t8x4=",
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "44831a7eaba4360fb81f2acc5ea6de5fde90aaa3",
@@ -277,6 +278,7 @@
     "nixpkgs_4": {
       "locked": {
         "lastModified": 1767313136,
+        "narHash": "sha256-16KkgfdYqjaeRGBaYsNrhPRRENs0qzkQVUooNHtoy2w=",
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "ac62194c3917d5f474c1a844b6fd6da2db95077d",
