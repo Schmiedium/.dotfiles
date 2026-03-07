@@ -20,8 +20,8 @@
       nixos = lib.nixosSystem {
         inherit system;
         modules = [./configuration.nix determinate.nixosModules.default 
-		  { nixpkgs.overlays = [claude-code.overlays.default ];
-		    environment.systemPackages = [ pkgs.claude-code ];	}
+		  { nixpkgs.overlays = [claude-code.overlays.default ];}
+
 	];
       };
     };
