@@ -7,9 +7,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, determinate, ...}:
+  outputs = { self, nixpkgs, home-manager, determinate, claude-code, ...}:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -18,7 +19,11 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [./configuration.nix determinate.nixosModules.default];
+        modules = [./configuration.nix determinate.nixosModules.default 
+		  { nixpkgs.overlays = [claude-code.overlays.default ];
+		    environment.systemPakcages = [ pkgs.clude-code ];	
+}
+	];
       };
     };
     homeConfigurations = {
