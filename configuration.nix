@@ -182,7 +182,7 @@
   swaylock
   dunst
   libnotify
-  rofi-wayland
+  rofi
   networkmanagerapplet
   pavucontrol
   gamescope
