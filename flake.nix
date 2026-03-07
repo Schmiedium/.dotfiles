@@ -21,7 +21,7 @@
         inherit system;
         modules = [./configuration.nix determinate.nixosModules.default 
 		  { nixpkgs.overlays = [claude-code.overlays.default ];
-		    environment.systemPakcages = [ pkgs.claude-code ];	
+		    environment.systemPackages = [ pkgs.claude-code ];	
 }
 	];
       };
