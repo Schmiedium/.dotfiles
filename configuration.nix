@@ -164,6 +164,7 @@
   openscad
   blender
   obsidian
+  zotero
   unityhub
   discord
   unzip
