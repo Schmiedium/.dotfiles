@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   # CLI tools — shared between the desktop machine and Docker
   home.packages = with pkgs; [
     neovim
@@ -23,7 +23,7 @@
     starship
     rustup
     clang
-    gcc
+    (lib.lowPrio gcc)
     unzip
     wget
   ];
