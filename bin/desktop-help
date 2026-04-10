@@ -1,0 +1,95 @@
+#!/usr/bin/env nu
+
+# Display all keyboard shortcuts from desktop configuration files
+
+let niri_config = $"($env.HOME)/.dotfiles/user/niri/config.kdl"
+
+# Parse niri keyboard bindings
+def parse_niri_binds [] {
+    let content = open $niri_config
+
+    mut binds = []
+
+    for line in ($content | lines) {
+        let trimmed = $line | str trim
+
+        # Skip comments and empty lines
+        if ($trimmed | str starts-with "//") or ($trimmed | is-empty) {
+            continue
+        }
+
+        # Look for lines with { and } that contain keybindings
+        if ($trimmed | str contains "{") and ($trimmed | str contains "}") {
+            # Check if this looks like a keybind
+            if ($trimmed =~ '^[A-Z].*\{.*\}') {
+                # Split by { to get key and the rest
+                let parts = ($trimmed | split row "{")
+
+                if ($parts | length) >= 2 {
+                    let key = ($parts.0 | str trim)
+
+                    # Split the rest by } to get the action
+                    let rest_parts = ($parts.1 | split row "}")
+                    let action_raw = $rest_parts.0 | str trim
+
+                    # Clean up action (remove trailing semicolon)
+                    let action = ($action_raw | str trim | str replace -a ";" "" | str trim)
+
+                    # Filter out non-keybind entries
+                    if (($key | str length) > 0) and (($action | str length) > 0) and not ($key | str contains "rule") and not ($key | str contains "binds") {
+                        $binds = ($binds | append {key: $key, action: $action, program: "niri"})
+                    }
+                }
+            }
+        }
+    }
+
+    $binds
+}
+
+# Format and display binds
+def display_binds [binds: list] {
+    if ($binds | length) == 0 {
+        print "No keyboard shortcuts found."
+        return
+    }
+
+    print "\n📋 DESKTOP KEYBOARD SHORTCUTS\n"
+    print "════════════════════════════════════════════════════════════════════════════════"
+    print ""
+
+    # Group by program
+    let grouped = ($binds | group-by program)
+    let programs = ($grouped | columns)
+
+    for program in ($programs | sort) {
+        let binds_for_program = ($grouped | get $program)
+
+        print $"📱 ($program | str upcase)"
+        print "────────────────────────────────────────"
+
+        # Sort by key for readability
+        let sorted = ($binds_for_program | sort-by key)
+
+        for bind in $sorted {
+            let key = $bind.key
+            let action = $bind.action
+            print $"  ($key)  →  ($action)"
+        }
+
+        print ""
+    }
+
+    print "════════════════════════════════════════════════════════════════════════════════"
+    print $"\n✨ Total: ($binds | length) shortcuts"
+    print "\n💡 Tip: Use 'regenerate-desktop-help' to refresh after editing config files\n"
+}
+
+# Main execution
+try {
+    let binds = parse_niri_binds
+    display_binds $binds
+} catch {|err|
+    print $"❌ Error parsing shortcuts: ($err.msg)"
+    exit 1
+}

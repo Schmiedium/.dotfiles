@@ -152,6 +152,8 @@
   dust
   ncspot
   swaybg
+  jujutsu
+  uv
   swayidle
   lua
   gimp

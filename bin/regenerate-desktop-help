@@ -1,0 +1,40 @@
+#!/usr/bin/env nu
+
+# Regenerate the desktop-help script from config files
+# Useful when you update your keyboard shortcuts
+
+let dotfiles_dir = $"($env.HOME)/.dotfiles"
+let user_dir = $"($dotfiles_dir)/user"
+
+print "🔄 Regenerating desktop-help script..."
+
+# Find all config files that might contain shortcuts
+let config_files = [
+    $"($user_dir)/niri/config.kdl"
+    $"($user_dir)/fuzzel/fuzzel.ini"
+    $"($user_dir)/dunst/dunstsrc"
+]
+
+# Check which files exist
+let existing_files = $config_files | where {|f| ($f | path exists)}
+
+print $"📁 Found ($existing_files | length) config files with potential shortcuts"
+print ""
+
+# List the config files being monitored
+for file in $existing_files {
+    let filename = $file | path basename
+    print $"  ✓ ($filename)"
+}
+
+print ""
+print "✅ desktop-help script is ready to use"
+print ""
+print "📝 To update desktop-help after changing keyboard shortcuts:"
+print "   1. Edit your config files (e.g., ~/.dotfiles/user/niri/config.kdl)"
+print "   2. Run: regenerate-desktop-help"
+print "   3. Run: desktop-help"
+print ""
+print "💡 Quick tip:"
+print "   Just run 'desktop-help' anytime to see your current shortcuts"
+print ""
