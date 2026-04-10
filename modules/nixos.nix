@@ -5,7 +5,7 @@
     modules = [
       inputs.determinate.nixosModules.default
       { nixpkgs.overlays = [ inputs.claude-code.overlays.default ]; }
-      ../configuration.nix
+      (inputs.import-tree ./_nixos)
     ];
   };
 }
