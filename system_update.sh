@@ -54,7 +54,7 @@ fi
 
 # Step 3: Rebuild NixOS
 echo ">> Running nixos-rebuild $REBUILD_MODE..."
-if ! nixos-rebuild "$REBUILD_MODE" --flake .#nixos; then
+if ! nixos-rebuild "$REBUILD_MODE" --sudo --flake .#nixos; then
     echo "!! nixos-rebuild failed. Aborting."
     exit 1
 fi
