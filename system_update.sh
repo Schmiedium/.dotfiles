@@ -54,7 +54,7 @@ fi
 
 # Step 3: Rebuild NixOS
 echo ">> Running nixos-rebuild $REBUILD_MODE..."
-if ! nixos-rebuild "$REBUILD_MODE" --flake . .#nixos && home-manager switch --flake .#alex; then
+if ! nixos-rebuild "$REBUILD_MODE" --flake .#nixos; then
     echo "!! nixos-rebuild failed. Aborting."
     exit 1
 fi
@@ -65,7 +65,7 @@ echo ">> System rebuild successful (generation $GEN)."
 # Step 4: Home Manager
 if $INCLUDE_HOME; then
     echo ">> Running home-manager switch..."
-    if ! home-manager switch --flake .; then
+    if ! home-manager switch --flake .#alex; then
         echo "!! home-manager switch failed."
         exit 1
     fi
