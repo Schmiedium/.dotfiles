@@ -7,7 +7,6 @@
     openscad
     blender
     obsidian
-    zotero
     unityhub
     discord
     claude-code

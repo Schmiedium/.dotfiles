@@ -24,6 +24,7 @@
     rustup
     clang
     unzip
+    pi-coding-agent
     wget
   ];
 }

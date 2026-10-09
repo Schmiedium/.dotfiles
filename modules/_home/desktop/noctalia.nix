@@ -1,4 +1,4 @@
 { pkgs, ... }: {
-  myConfig.useNoctalia = true;
+  myConfig.useNoctalia = false;
   home.packages = [ pkgs.noctalia-shell ];
 }
