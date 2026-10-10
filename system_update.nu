@@ -36,20 +36,22 @@ def main [
 
     # Step 3: Rebuild NixOS
     print $">> Running nixos-rebuild ($rebuild_mode)..."
-    let result = (do { nixos-rebuild $rebuild_mode --flake . --use-remote-sudo } | complete)
-    if $result.exit_code != 0 {
+    try {
+        nixos-rebuild $rebuild_mode --sudo --flake .#nixos
+    } catch {
         print "!! nixos-rebuild failed. Aborting."
         exit 1
     }
 
-    let gen = (nixos-rebuild list-generations | lines | where { |l| $l =~ "current" } | first | split words | first)
+    let gen = (nixos-rebuild list-generations --json | from json | where current | first | get generation)
     print $">> System rebuild successful \(generation ($gen)\)."
 
     # Step 4: Home Manager
     if $home {
         print ">> Running home-manager switch..."
-        let hm_result = (do { home-manager switch --flake . } | complete)
-        if $hm_result.exit_code != 0 {
+        try {
+            home-manager switch --flake .#alex
+        } catch {
             print "!! home-manager switch failed."
             exit 1
         }
